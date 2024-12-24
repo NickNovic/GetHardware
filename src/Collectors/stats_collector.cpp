@@ -2,6 +2,9 @@
 
 #include "../Models/stat_dto.cpp"
 
+#ifndef STATS_COLLECTOR
+#define STATS_COLLECTOR
+
 class stats_collector{
     public:
     virtual std::string get_label() = 0;
@@ -10,3 +13,5 @@ class stats_collector{
 };
 
 stats_collector::~stats_collector(){}
+
+#endif

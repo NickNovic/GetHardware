@@ -63,11 +63,9 @@ public:
     }
 
     std::vector<stat_dto>* collect() override{
-        using namespace std;
         float total_space = get_size();
         float free_space = get_free_space();
         float used_space = total_space - free_space;
-
 
         stat_dto* dto = form_to_dto("Total Space", total_space);
         stats_list->insert(stats_list->end(), *dto);
